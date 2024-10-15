@@ -1,4 +1,4 @@
-package entities;
+package ahmed.foudi.smartbank.entities;
 
 import com.fasterxml.jackson.annotation.JsonBackReference;
 import com.fasterxml.jackson.annotation.JsonProperty;

@@ -29,16 +29,25 @@
                 <div class="step" id="step3">3<br>Mes infos personnelles</div>
             </div>
 
-            <form id="creditForm">
+            <form id="creditForm" action="${pageContext.request.contextPath}/submitCreditForm" method="POST">
                 <div class="step-content" id="step1-content">
                     <label for="project">Mon projet</label>
                     <select id="project" required>
-                        <option value="">J'ai besoin d'argent</option>
+                        <option value="personal">J'ai besoin d'argent</option>
+                        <option value="used_vehicle">je finance mon véhicule d'occasion</option>
+                        <option value="personal_expenses">je gére mes imprevus</option>
+                        <option value="new_vehicle">je finance mon véhicule neuf</option>
+                        <option value="home_equipment">j'équipe ma maison</option>
                     </select>
 
                     <label for="status">Je suis</label>
                     <select id="status" required>
-                        <option value="fonctionnaire">Fonctionnaire</option>
+                        <option value="private_employee">salarié du sectuer prive</option>
+                        <option value="civil_servant">fonctionnaire </option>
+                        <option value="merchant">profession liberale</option>
+                        <option value="artisan">Commercant</option>
+                        <option value="liberal_profession">Artisan</option>
+                        <option value="retiree">retraite</option>
                     </select>
 
                     <label for="amount">Montant (en DH)</label>
@@ -124,26 +133,30 @@
             <div class="summary-progress">
                 <div class="progress-bar"></div>
             </div>
-            <div class="summary-content">
+            <div class="summary-content" >
                 <h3>Mon projet</h3>
                 <p id="summaryProject">Prêt Personnel</p>
-                <h3>Coordonnées et infos personnelles</h3>
-                <p>Civilité: <span id="summaryCivilite"></span></p>
-                <p>Nom: <span id="summaryNom"></span></p>
-                <p>Prénom: <span id="summaryPrenom"></span></p>
-                <p>CIN / Carte de séjour: <span id="summaryCIN"></span></p>
-                <p>Date de naissance: <span id="summaryBirthdate"></span></p>
-                <p>Date d'embauche: <span id="summaryEmploymentDate"></span></p>
-                <p>Revenus mensuels: <span id="summaryIncome"></span></p>
-                <p>Crédits en cours: <span id="summaryCredit"></span></p>
-                <p>Email: <span id="summaryEmail"></span></p>
-                <p>Téléphone: <span id="summaryPhone"></span></p>
+                <div id="coord" style="display:block;">
+                    <h3>Coordonnées et infos personnelles</h3>
+                    <p>Civilité: <span id="summaryCivilite"></span></p>
+                    <p>Nom: <span id="summaryNom"></span></p>
+                    <p>Prénom: <span id="summaryPrenom"></span></p>
+                    <p>CIN / Carte de séjour: <span id="summaryCIN"></span></p>
+                    <p>Date de naissance: <span id="summaryBirthdate"></span></p>
+                    <p>Date d'embauche: <span id="summaryEmploymentDate"></span></p>
+                    <p>Revenus mensuels: <span id="summaryIncome"></span></p>
+                    <p>Crédits en cours: <span id="summaryCredit"></span></p>
+                    <p>Email: <span id="summaryEmail"></span></p>
+                    <p>Téléphone: <span id="summaryPhone" ></span></p>
+                </div>
+                <div id="details"  >
                 <h3>Détails de mon crédit</h3>
                 <p>Vous êtes: <span id="summaryStatus"></span></p>
                 <p>Montant: <span id="summaryAmount"></span> DH</p>
                 <p>Durée: <span id="summaryDuration"></span> mois</p>
                 <p>Mensualité: <span id="summaryMonthly"></span> DH</p>
                 <p>Frais de dossier: <span id="summaryFees"></span> DH</p>
+                </div>
             </div>
         </div>
     </div>
@@ -153,3 +166,4 @@
 <script src="${pageContext.request.contextPath}/ressources/js/scripts.js"></script>
 </body>
 </html>
+

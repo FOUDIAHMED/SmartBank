@@ -1,4 +1,4 @@
-package db;
+package ahmed.foudi.smartbank.db;
 
 import jakarta.persistence.EntityManager;
 import jakarta.persistence.EntityManagerFactory;

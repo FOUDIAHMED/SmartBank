@@ -4,9 +4,9 @@
              xsi:schemaLocation="https://jakarta.ee/xml/ns/persistence
              https://jakarta.ee/xml/ns/persistence/persistence_3_0.xsd">
   <persistence-unit name="smartbank" transaction-type="RESOURCE_LOCAL">
-    <class>entities.Request</class>
-    <class>entities.RequestStatus</class>
-    <class>entities.Status</class>
+    <class>ahmed.foudi.smartbank.entities.Request</class>
+    <class>ahmed.foudi.smartbank.entities.RequestStatus</class>
+    <class>ahmed.foudi.smartbank.entities.Status</class>
     <properties>
       <property name="jakarta.persistence.jdbc.driver" value="org.postgresql.Driver" />
       <property name="jakarta.persistence.jdbc.url"    value="jdbc:postgresql://localhost:5432/smartbank" />

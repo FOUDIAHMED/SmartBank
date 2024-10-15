@@ -1,6 +1,6 @@
 package metier.Test;
 
-import metier.CreditMetierImp;
+import ahmed.foudi.smartbank.metier.CreditMetierImp;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;

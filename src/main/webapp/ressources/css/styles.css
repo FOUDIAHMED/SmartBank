@@ -1,5 +1,5 @@
 :root {
-    --primary-color: #00a19c;
+    --primary-color: #ffc107;
     --secondary-color: #ffc107;
     --text-color: #333;
     --background-color: #f8f8f8;
@@ -56,11 +56,11 @@ nav {
 }
 
 .nav-links a:hover {
-    color: var(--primary-color);
+    color: var(--secondary-color);
 }
 
 .mon-compte {
-    background-color: var(--primary-color);
+    background-color: var(--secondary-color);
     color: white;
     border: none;
     padding: 0.5rem 1rem;
@@ -91,7 +91,7 @@ main {
 
 h1 {
     margin-bottom: 1rem;
-    color: var(--primary-color);
+    color: var(--secondary-color);
 }
 
 .retour {
@@ -192,11 +192,12 @@ input[type="range"]::-webkit-slider-runnable-track {
 }
 
 output {
+    display: none;
     position: absolute;
     top: -30px;
     left: 50%;
     transform: translateX(-50%);
-    background: var(--primary-color);
+    background: var(--success-color);
     color: white;
     padding: 4px 8px;
     border-radius: 4px;
@@ -212,8 +213,27 @@ output {
     transition: all 0.3s ease;
 }
 
+.radio-group {
+    display: flex; /* Use flexbox to align items in a row */
+    gap: 10px; /* Space between radio buttons */
+}
+
+.radio-group input {
+    margin-right: 2px; /* Add space between the radio button and its label */
+}
+
+.radio-group input[type="radio"] {
+    width: 16px;  /* Adjust width */
+    height: 16px; /* Adjust height */
+    border: 1px solid #000;   /* Custom border */
+    border-radius: 50%;       /* Make it circular */
+    outline: none;             /* Remove outline on focus */
+    cursor: pointer;           /* Change cursor to pointer */
+}
+
+
 .btn-primary {
-    background-color: var(--primary-color);
+    background-color: var(--success-color);
     color: white;
     border: none;
 }
@@ -224,24 +244,16 @@ output {
 
 .btn-secondary {
     background-color: white;
-    color: var(--primary-color);
-    border: 1px solid var(--primary-color);
+    color: var(--success-color);
+    border: 1px solid var(--success-color);
 }
 
 .btn-secondary:hover {
-    background-color: var(--primary-color);
+    background-color: var(--success-color);
     color: white;
 }
 
-.radio-group, .checkbox-group {
-    margin-top: 0.5rem;
-}
 
-.radio-group label, .checkbox-group label {
-    display: inline;
-    margin-right: 1rem;
-    font-weight: normal;
-}
 
 .summary {
     flex: 1;
@@ -263,9 +275,11 @@ output {
 .progress-bar {
     height: 100%;
     width: 0;
-    background-color: var(--primary-color);
+    background-color: var(--success-color);
     transition: width 0.5s ease;
 }
+
+
 
 .summary-content {
     opacity: 0;
@@ -279,14 +293,14 @@ output {
 }
 
 .summary h2 {
-    color: var(--primary-color);
+    color: var(--text-color);
     margin-bottom: 1rem;
 }
 
 .summary h3 {
     margin-top: 1rem;
     margin-bottom: 0.5rem;
-    color: var(--primary-color);
+    color: var(--text-color);
 }
 
 .summary p {

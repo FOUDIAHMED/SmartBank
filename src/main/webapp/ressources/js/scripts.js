@@ -1,6 +1,8 @@
 document.addEventListener('DOMContentLoaded', function() {
     const form = document.getElementById('creditForm');
     const step1Content = document.getElementById('step1-content');
+    const s1=document.getElementById('cord');
+    const s2=document.getElementById('details');
     const step2Content = document.getElementById('step2-content');
     const step3Content = document.getElementById('step3-content');
     const step1 = document.getElementById('step1');
@@ -76,7 +78,7 @@ document.addEventListener('DOMContentLoaded', function() {
         if (step3.classList.contains('active')) progress = 100;
 
         progressBar.style.width = progress + '%';
-        
+
         if (progress > 0) {
             summary.classList.add('active');
         } else {
@@ -87,14 +89,20 @@ document.addEventListener('DOMContentLoaded', function() {
     continueStep1.addEventListener('click', function() {
         step1Content.style.display = 'none';
         step2Content.style.display = 'block';
+        s2.style.display='block';
+
+
         step1.classList.remove('active');
         step2.classList.add('active');
         updateProgressBar();
     });
 
     continueStep2.addEventListener('click', function() {
+
         step2Content.style.display = 'none';
         step3Content.style.display = 'block';
+        s1.style.display='block';
+        s2.style.display='block';
         step2.classList.remove('active');
         step3.classList.add('active');
         updateProgressBar();
@@ -137,3 +145,4 @@ document.addEventListener('DOMContentLoaded', function() {
         input.addEventListener('change', updateSummary);
     });
 });
+

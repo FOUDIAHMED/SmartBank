@@ -1,4 +1,4 @@
-package entities;
+package ahmed.foudi.smartbank.entities;
 
 import jakarta.persistence.*;
 
